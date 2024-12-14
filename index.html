@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap" rel="stylesheet">
   <title>Mondrian Project</title>
   <style>
     /*
@@ -20,11 +23,11 @@
     But grid lines are transparent!
     */
     body {
-      height: 100vh;
+      /* height: 100vh; */
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-
       margin: 0;
       padding: 0;
 
@@ -36,7 +39,7 @@
       gap: 9px;
       grid-template-columns: 320px 198px 153px 50px;
       grid-template-rows: 414px 130px 155px 20px;
-      border: 0;
+
     }
 
     .cell {
@@ -76,6 +79,96 @@
     .nine {
       background-color: #232629;
     }
+
+
+    mondrian-picture {
+      background-color: #000;
+      display: grid;
+      grid-template-columns: repeat(10, 70px);
+      grid-template-rows: repeat(10, 70px);
+      gap: 9px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    mondrian-item {
+      background-color: #F0F1EC;
+    }
+
+    #first {
+      grid-area: 1 /1 / span 3 / span 2;
+      background-color: #c6b736;
+    }
+
+    #second {
+      grid-area: 1 / 3 / 2 / span 4;
+      background-color: #d03522;
+    }
+
+    #third {
+      grid-area: 2 / 3 / 4 / span 4;
+      background-color: #d03522;
+    }
+
+    #four {
+      grid-area: 1 / 7 / span 1 / span 3;
+      background-color: #afaca7;
+    }
+
+    #five {
+      grid-area: 2 / 7 / span 4 / span 4;
+      background-color: #bfad2a;
+
+    }
+
+    #six {
+      grid-area: 4 /1 /span 6 / 2;
+      background-color: #b4afab;
+    }
+
+    #seven {
+      grid-area: 10 / 1 / 11 / 7;
+      background-color: #bfad2a;
+    }
+
+    #eight {
+      grid-area: 4 / 2 / span 4 / span 4;
+      background-color: #1758b6;
+    }
+
+    #nine {
+      grid-area: 4/ 6 / span 4;
+      background-color: #000;
+    }
+
+    #ten {
+      grid-area: 8 / 2 / 10 / 7;
+      display: flex;
+      justify-content: end;
+      align-items: end;
+      color: #004592;
+      font-family: "Oldenburg", serif;
+    }
+
+    #eleven {
+      grid-area: 6 / 10 / span 5 / 11;
+      background-color: #000;
+    }
+
+    #twelve {
+      grid-area: 6 / 7 / span 5 / span 2;
+      background-color: #d03522;
+    }
+
+    #thirteen {
+      grid-area: 6 / 9 / span 3;
+      background-color: #b4afab;
+    }
+
+    #fourteen {
+      grid-area: 9 / 9 / 11;
+      background-color: #a25ccf;
+    }
   </style>
 </head>
 
@@ -91,8 +184,25 @@
     <div class="cell seven"></div>
     <div class="cell eight"></div>
     <div class="cell nine"></div>
-
   </div>
+
+
+  <mondrian-picture>
+    <mondrian-item id="first"></mondrian-item>
+    <mondrian-item id="second"></mondrian-item>
+    <mondrian-item id="third"></mondrian-item>
+    <mondrian-item id="four"></mondrian-item>
+    <mondrian-item id="five"></mondrian-item>
+    <mondrian-item id="six"></mondrian-item>
+    <mondrian-item id="seven"></mondrian-item>
+    <mondrian-item id="eight"></mondrian-item>
+    <mondrian-item id="nine"></mondrian-item>
+    <mondrian-item id="ten"> for you love of my life</mondrian-item>
+    <mondrian-item id="eleven"></mondrian-item>
+    <mondrian-item id="twelve"></mondrian-item>
+    <mondrian-item id="thirteen"></mondrian-item>
+    <mondrian-item id="fourteen"></mondrian-item>
+  </mondrian-picture>
 </body>
 
 </html>
